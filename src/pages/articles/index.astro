@@ -33,7 +33,7 @@ const articlesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
   <h1 class="text-2xl pb-3">All Articles</h1>
   <SearchForm />
   <hr class="h-2px b-w mt-6" />
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 auto-rows-min">
     {articlesForPage.map((article) => <ArticleCard article={article} />)}
   </div>
   <Pagination
