@@ -4,6 +4,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/Tags.astro";
 import Time from "../../components/Time.astro";
 import { getEntry } from "astro:content";
+import InnerLayout from "../../layouts/InnerLayout.astro";
 
 const { slug } = Astro.params;
 
@@ -20,6 +21,7 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout>
+  <InnerLayout>
   <a
     href="/articles"
     class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white"
@@ -39,6 +41,7 @@ const { Content } = await entry.render();
     />
     <Content />
   </article>
+  </InnerLayout>
 </MainLayout>
 
 <style is:global>

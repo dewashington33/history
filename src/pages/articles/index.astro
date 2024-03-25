@@ -7,6 +7,7 @@ import { ARTICLES_PER_PAGE } from "../../constants";
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import InnerLayout from "../../layouts/InnerLayout.astro";
 
 const currentPage: number | null = Astro.url.searchParams.get("page")
   ? parseInt(Astro.url.searchParams.get("page") as string)
@@ -30,6 +31,7 @@ const articlesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
 ---
 
 <MainLayout>
+  <InnerLayout>
   <h1 class="text-2xl pb-3">All Articles</h1>
   <SearchForm />
   <hr class="h-2px b-w mt-6" />
@@ -42,4 +44,5 @@ const articlesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
     disablePrevious={currentPage === 1}
     disableNext={currentPage === totalPages}
   />
+</InnerLayout>
 </MainLayout>

@@ -1,7 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../images/logo.png";
+import Hero from "../components/Hero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import InnerLayout from "../layouts/InnerLayout.astro";
 import SearchForm from "../components/SearchForm.astro";
 import ArticalCard from "../components/ArticleCard.astro";
 import MostRecentArticle from "../components/MostRecentArticle.astro";
@@ -23,6 +25,8 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
 ---
 
 <MainLayout>
+  <Hero />
+  <InnerLayout>
   <!-- Top Grid -->
   <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
     <div>
@@ -43,4 +47,5 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
         .map((article) => <ArticalCard article={article} />)
     }
   </div>
+</InnerLayout>
 </MainLayout>

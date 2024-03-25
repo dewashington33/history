@@ -5,9 +5,11 @@ import about from "../images/about-us.jpg";
 import team1 from "../images/team1.png";
 import team2 from "../images/team2.png";
 import team3 from "../images/team3.png";
+import InnerLayout from "../layouts/InnerLayout.astro";
 ---
 
 <MainLayout title="About The Perry Area Historical Society">
+  <InnerLayout>
   <h1 class="text-4xl font-bold mb-5">About The Perry Area Historical Society</h1>
   <div class="flex flex-col md:flex-row items-center justify-between gap-6">
     <div class="w-full md:w-1/2 mb-8 md:mb-0">
@@ -63,4 +65,5 @@ import team3 from "../images/team3.png";
       </div>
     </div>
   </div>
+</InnerLayout>
 </MainLayout>

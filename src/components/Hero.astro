@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import museumBg from "../images/museumBg.jpg";
+---
+<section>
+<div class="bg-gradient-to-tl from-blue-900 to-gray-900 w-full relative min-h-screen">
+<Image src={museumBg} alt="Museum Background" class="w-full h-full object-cover absolute mix-blend-overlay" />
+<div class="z-0 p-4 pt-30 md:pt-60">
+<div class="flex flex-col">
+            <h1 class="text-white text-4xl font-bold font-cinzel">
+              Celebrating Perry&apos;s heritage and history
+            </h1>
+            <h2 class="font-medium text-2xl font-cinzel text-indigo-400 z-10">
+              Founded 1824
+            </h2>
+          </div>
+          <div class="flex flex-col mt-4">
+            <p class="mb-8 leading-relaxed text-white text-lg text-wrap">
+              Originally called Wattsville and founded in 1823 for the purpose
+              of conducting the county`s legal affairs, the town was placed in
+              the geographic center of Houston County, which was then much
+              larger than it is today. The town`s name was changed to Perry in
+              honor of Commodore Oliver Hazard Perry, a hero of the War of 1812
+              (1812-15). On December 9, 1824, the Georgia legislature approved
+              the incorporation of Perry, the first official town in Houston
+              County. Morris, Susan. &quot;Perry.&quot; New Georgia
+              Encyclopedia, last modified Jul 12, 2022.
+            </p>
+            <br />
+            <a
+              class="text-indigo-400 text-2xl cursor-pointer hover:underline relative z-10 font-bold font-cinzel"
+              href="https://www.georgiaencyclopedia.org/articles/counties-cities-neighborhoods/perry/"
+              
+            >
+              New Georgia Encyclopedia
+            </a>
+          </div>
+</div>
+</div>
+</section>
