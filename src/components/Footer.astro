@@ -1,7 +1,8 @@
 ---
+import Capitalize from "./Capitalize.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
-import { capitalize } from "../utils";
+//import { capitalize } from "../utils";
 import { ABOUT_DESCRIPTION } from "../constants";
 // Get all blog articles
 const allBlogArticles: CollectionEntry<"blog">[] = (
@@ -30,7 +31,7 @@ const uniqueTags: string[] = [...new Set(tags)];
         <ul class="text-white text-sm">
           {uniqueTags.map(tag => (
             <li class="mb-2">
-              <a href={'/articles/tag/' + tag}>#{capitalize(tag)}</a>
+              <a href={'/articles/tag/' + tag}>#<Capitalize str=tag /></a>
             </li>
           ))}
         </ul>

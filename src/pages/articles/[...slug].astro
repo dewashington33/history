@@ -2,8 +2,9 @@
 //This is for SSR (Server Side Rendering) with Astro
 import MainLayout from "../../layouts/MainLayout.astro";
 import Tags from "../../components/Tags.astro";
+import Time from "../../components/Time.astro";
 import { getEntry } from "astro:content";
-import { formatDate } from "../../utils";
+//import { formatDate } from "../../utils";
 
 const { slug } = Astro.params;
 
@@ -28,7 +29,8 @@ const { Content } = await entry.render();
   <article>
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
     <h3 class="text-lg mb-2">
-      Written by {entry.data.author} on {formatDate(entry.data.pubDate)}
+      Written by {entry.data.author} on <Time date={entry.data.pubDate} />
+      
     </h3>
     <Tags tags={entry.data.tags} />
     <img

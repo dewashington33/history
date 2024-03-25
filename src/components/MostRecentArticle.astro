@@ -1,5 +1,5 @@
 ---
-import { formatDate } from "../utils";
+import Time from "../components/Time.astro";
 import type { CollectionEntry } from "astro:content";
 
 const { article } = Astro.props;
@@ -25,7 +25,7 @@ interface Props {
           {article.data.title}
         </h2>
         <p class="text-xl mt-4 mb-4">
-          {formatDate(article.data.pubDate)}
+          <Time date={article.data.pubDate} />
         </p>
 
         <div class="flex flex-wrap justify-center gap-2">
