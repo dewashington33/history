@@ -31,7 +31,7 @@ const uniqueTags: string[] = [...new Set(tags)];
         <ul class="text-white text-sm">
           {uniqueTags.map(tag => (
             <li class="mb-2">
-              <a href={'/articles/tag/' + tag}>#<Capitalize str=tag /></a>
+              <a href={'/articles/tag/' + tag}>#<Capitalize str={tag} /></a>
             </li>
           ))}
         </ul>

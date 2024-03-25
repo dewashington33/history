@@ -1,0 +1,19 @@
+To Do for history project
+
+Look at loading the images for the cards using the Image from Astro rather than public to try and get them the same size cards.
+
+Home page
+ 	-- Modify main page so it looks similar to the Museum page.
+ 	-- Make the blog section on the main page have something like three of the last three articles.  
+	-- Need to look at adding a date for when you added the article and a date for the article from where you got the info
+	-- Probably remove the MostRecentArticle
+	-- Look at Dark Mode or change the background color to a parchment type color
+
+
+Footer
+	-- Modify the color of the Footer to match the Navbar
+
+
+Tags
+	-- Look at putting tags under or over the Seach and remove from Footer
+	
