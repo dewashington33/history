@@ -1,5 +1,5 @@
 ---
-title: "John Houstoun"
+title: "Governor John Houstoun"
 subtitle: "Houston County namesake"
 pubDate: 2024-03-22
 author: "New Georgia Encyclopedia"

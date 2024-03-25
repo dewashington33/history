@@ -1,10 +1,10 @@
 ---
-title: "Houston County"
+title: "Houston County, Georgia"
 subtitle: "Land Lottery 1821"
 pubDate: 1821-05-15
 author: "Georgia Archive"
 image: "georgia-land-lottery-map.jpeg"
-tags: ["Houston", "founded"]
+tags: ["county"]
 slug: houston-county-1821-land-lottery
 ---
 
