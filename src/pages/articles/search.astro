@@ -4,6 +4,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import SearchForm from '../../components/SearchForm.astro';
 import {  getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import InnerLayout from '../../layouts/InnerLayout.astro';
 
 const query: string | null = Astro.url.searchParams.get('query');
 const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection('blog');
@@ -24,7 +25,7 @@ const searchResults = allBlogArticles.filter((article) => {
   return titleMatch || bodyMatch || slugMatch;
 });
 ---
-<MainLayout title="Search Results">
+<MainLayout title="Search Results"><InnerLayout>
 <a href="/articles" class="inline-block bg-gray-100 p-2 mb-5 hover:bg-indigo-500
  hover:text-white">
     All Articles
@@ -39,4 +40,5 @@ const searchResults = allBlogArticles.filter((article) => {
   />
 ))}
   </div>
+</InnerLayout>
 </MainLayout>
