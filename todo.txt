@@ -11,7 +11,8 @@ Home page
 
 
 Footer
-	-- Modify the color of the Footer to match the Navbar
+	-- Modify the color of the Footer to match the Navbar 
+	--
 
 
 Tags
