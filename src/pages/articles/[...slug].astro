@@ -36,41 +36,13 @@ const { Content } = await entry.render();
     <Tags tags={entry.data.tags} />
     <img
       src={"/images/" + entry.data.image}
-      alt="Article Image"
-      class="w-full h-auto rounded-xl my-6"
+      alt={entry.data.title}
+      class="w-full h-fit rounded-2xl shadow-2xl mb-6 mt-6 aspect-auto object-cover"
     />
-    <Content />
+    <div class="prose prose-2xl overflow-visible relative mb-20">
+      <Content />
+    </div>
   </article>
   </InnerLayout>
 </MainLayout>
 
-<style is:global>
-  p {
-    @apply my-5 mx-0;
-  }
-
-  h1 {
-    @apply my-5 mx-0;
-    @apply text-3xl font-bold;
-  }
-
-  h2 {
-    @apply my-5 mx-0;
-    @apply text-2xl;
-  }
-
-  h3 {
-    @apply my-5 mx-0;
-    @apply text-2xl font-bold;
-  }
-
-  ul {
-    @apply pl-10; /* Add some padding to the left of the list */
-  }
-
-  ul li {
-    list-style-type: circle; /* Change the bullet points to circles */
-    @apply mb-2.5; /* Add some margin to the bottom of each list item */
-  }
-
-</style>
