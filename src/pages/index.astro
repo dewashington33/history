@@ -8,6 +8,7 @@ import SearchForm from "../components/SearchForm.astro";
 import ArticalCard from "../components/ArticleCard.astro";
 import MostRecentArticle from "../components/MostRecentArticle.astro";
 
+
 import { HOMEPAGE_ARTICLE_LIMIT, SITE_DESCRIPTION } from "../constants";
 
 import { getCollection } from "astro:content";
@@ -35,6 +36,7 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
       </h1>
 
       <SearchForm />
+      
     </div>
     <MostRecentArticle article={mostRecentArticle}/>
   </div>
