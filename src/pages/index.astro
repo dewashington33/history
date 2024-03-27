@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import logo from "../images/logo.png";
 import Hero from "../components/Hero.astro";
+import Banner from "../components/Banner.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import InnerLayout from "../layouts/InnerLayout.astro";
 import SearchForm from "../components/SearchForm.astro";
@@ -27,6 +28,7 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
 
 <MainLayout>
   <Hero />
+  <Banner />
   <InnerLayout>
   <!-- Top Grid -->
   <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
