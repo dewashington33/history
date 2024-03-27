@@ -30,23 +30,22 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
   <Hero />
   <Banner />
   <InnerLayout>
-  <!-- Top Grid -->
-  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-    <div>
-      <h1 class="text-2xl font-bold mt-4 mb-8 leading-tight xl:text-4xl">
-        {SITE_DESCRIPTION}
-      </h1>
-
-      <SearchForm />
-      
-    </div>
-    <MostRecentArticle article={mostRecentArticle}/>
-  </div>
-
-  <!-- Main Grid -->
+    
+  <!-- Top of Articles -->
+  <div class="flex flex-row items-center space-x-2 pt-4">
+  <span class="flex justify-center items-center">
+    <!-- SVG icon remains the same -->
+    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>Star</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.2614 19.9399C17.3364 19.9809 17.4184 20.0009 17.5004 20.0009C17.6024 20.0009 17.7044 19.9689 17.7904 19.9079C17.9454 19.7969 18.0244 19.6069 17.9934 19.4179L17.0354 13.6716L20.8536 9.85336C20.9866 9.72135 21.0336 9.52634 20.9766 9.34733C20.9196 9.16832 20.7676 9.03732 20.5826 9.00632L14.8333 8.04826L12.4471 3.27601C12.3631 3.10701 12.1891 3 12.0001 3C11.8111 3 11.6381 3.10701 11.5531 3.27601L9.16697 8.04826L3.41767 9.00632C3.23266 9.03732 3.08065 9.16932 3.02365 9.34733C2.96664 9.52534 3.01465 9.72135 3.14665 9.85336L6.96485 13.6716L6.0068 19.4179C5.9748 19.6069 6.05381 19.7969 6.20981 19.9079C6.36582 20.0189 6.57083 20.0319 6.73884 19.9399L12.0001 17.0707L17.2614 19.9399ZM12.2395 16.0619C12.1655 16.0209 12.0825 16.0009 12.0005 16.0009C11.9185 16.0009 11.8364 16.0209 11.7614 16.0619L7.1622 18.57L7.99325 13.5828C8.01925 13.4228 7.96725 13.2608 7.85324 13.1467L4.54007 9.83357L9.58233 8.99353C9.74034 8.96653 9.87535 8.86652 9.94735 8.72352L12.0005 4.6173L14.0536 8.72352C14.1256 8.86652 14.2606 8.96753 14.4186 8.99353L19.4608 9.83357L16.1477 13.1467C16.0327 13.2608 15.9807 13.4238 16.0077 13.5828L16.8387 18.57L12.2395 16.0619Z" fill="currentColor"></path>
+    </svg>
+  </span>
+  <h3 class="text-md font-semibold">Featured Articles</h3>
+</div>
+<!-- Articles -->
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
     {
-      otherArticles
+      allBlogArticles
         .slice(0, HOMEPAGE_ARTICLE_LIMIT)
         .map((article) => <ArticalCard article={article} />)
     }

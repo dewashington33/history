@@ -1,4 +1,24 @@
-<form id="search-form" class="flex items-center" action="/articles/search">
+---
+import Capitalize from "./Capitalize.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Tags from "./Tags.astro";
+
+// Get all blog articles
+const allBlogArticles: CollectionEntry<"blog">[] = (
+  await getCollection("blog")
+).sort(
+  (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+// Get all tags
+const tags: string[] = allBlogArticles.flatMap((article: any) => article.data.tags).sort();
+//
+const uniqueTags: string[] = [...new Set(tags)];
+//console.log(uniqueTags)
+---
+
+<form id="search-form" class="flex items-center mb-4" action="/articles/search">
   <label for="search-input" class="sr-only">Search</label>
   <div class="relative w-full">
     <input
@@ -31,3 +51,7 @@
     <span class="sr-only">Search</span>
   </button>
 </form>
+<div>
+  <p class="text-sm font-medium text-indigo-500 mb-3">Categories</p>
+  <Tags tags={uniqueTags} />
+</div>

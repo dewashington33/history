@@ -1,15 +1,16 @@
 ---
 import type { Code } from 'astro:components'
 import SearchForm from '../components/SearchForm.astro'
+
 ---
 <section class="block bg-slate-900 text-center">
-  <div class="container mx-auto" style="max-width: 880px;">
+  <div class="container mx-auto max-w-screen-xl px-8 pt-6">
     <h2 class="text-2xl text-white font-bold">Crossroads of Georgia</h2>
-    <div>
-      <p class="text-white text-lg">Search our 200 year old town's amazing history</p>
-      <a class="bg-slate-900 text-white font-bold py-2 px-4 rounded" href="https://www.georgiaencyclopedia.org/quick-facts/">
-        ...
-      </a>
+    <div> 
+      <a
+            href="/articles.html"
+            class="block py-2 px-3 mb-6 text-white text-lg rounded md:p-0 hover:text-indigo-400"
+            >See all the article about our 200 year old town's amazing history</a>
       <SearchForm />
     </div>
   </div>
